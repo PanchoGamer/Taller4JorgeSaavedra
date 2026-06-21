@@ -22,6 +22,8 @@ public class App {
 		while (s.hasNextLine())
 		{
 			String linea = s.nextLine();
+			sistema.crearCartas(linea);
 		}
+		s.close();
 	}
 }

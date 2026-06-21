@@ -33,4 +33,10 @@ public class SistemaImpl implements Sistema{
 		
 		cartas.add(c);
 	}
+	
+	@Override
+	public int calcularPuntaje(int index)
+	{
+		
+	}
 }
