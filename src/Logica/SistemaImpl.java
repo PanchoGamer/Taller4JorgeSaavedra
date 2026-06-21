@@ -26,7 +26,11 @@ public class SistemaImpl implements Sistema{
 	{
 		String[] partes = linea.split(";");
 		String nombre = partes[0];
-		String tipo = partes[1];
+		int rareza = Integer.parseInt(partes[1]);
+		String tipo = partes[2];
 		
+		Carta c = CartasFactory.crearTipos(nombre,rareza,tipo,partes);
+		
+		cartas.add(c);
 	}
 }

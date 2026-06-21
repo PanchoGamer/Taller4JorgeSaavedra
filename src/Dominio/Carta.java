@@ -2,11 +2,13 @@ package Dominio;
 
 public class Carta {
 	private String nombre;
+	private int rareza;
 	private String tipo;
 	
-	public Carta(String nombre, String tipo) 
+	public Carta(String nombre, int rareza,String tipo) 
 	{
 		this.nombre = nombre;
+		this.rareza = rareza;
 		this.tipo = tipo;
 	}
 
@@ -14,7 +16,12 @@ public class Carta {
 	{
 		return nombre;
 	}
-
+	
+	public int getRareza()
+	{
+		return rareza;
+	}
+	
 	public String getTipo() 
 	{
 		return tipo;

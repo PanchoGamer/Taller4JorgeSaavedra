@@ -4,9 +4,9 @@ public class Pokemon extends Carta{
 	private int damage;
 	private int cantEnergias;
 	
-	public Pokemon(String nombre, String tipo, int damage, int cantEnergias) 
+	public Pokemon(String nombre, int rareza, String tipo, int damage, int cantEnergias) 
 	{
-		super(nombre, tipo);
+		super(nombre, rareza, tipo);
 		this.damage = damage;
 		this.cantEnergias = cantEnergias;
 	}
