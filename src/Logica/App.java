@@ -1,8 +1,14 @@
+/// Nombre: Jorge Andrés Saavedra Sanchez  
+/// Rut: 22.347.590-6  
+/// Carrera: Ingenieria en Tecnologias de Informacion
+
 package Logica;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+
+import GUI.*;
 
 public class App {
 	
@@ -10,7 +16,11 @@ public class App {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		
+		GUI interfaz = new GUI();
+		
 		leerCartas();
+		
+		interfaz.imprimirGUI();
 		
 	}
 	

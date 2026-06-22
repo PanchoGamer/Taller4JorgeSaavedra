@@ -1,6 +1,8 @@
 package Dominio;
 
-public class Carta {
+import Visitor.*;
+
+public abstract class Carta {
 	private String nombre;
 	private int rareza;
 	private String tipo;
@@ -26,4 +28,6 @@ public class Carta {
 	{
 		return tipo;
 	}
+	
+	public abstract int accept(CartaVisitor visitor);
 }

@@ -6,12 +6,12 @@ public class CartasFactory {
 	{
 		if (tipo.equalsIgnoreCase("Pokemon"))
 		{
-			return new Pokemon(nom,rareza,tipo,Integer.parseInt(partes[2]),Integer.parseInt(partes[3]));
+			return new Pokemon(nom,rareza,tipo,Integer.parseInt(partes[3]),Integer.parseInt(partes[4]));
 		}
 		
 		else if (tipo.equalsIgnoreCase("Item"))
 		{
-			return new Item(nom,rareza,tipo,Integer.parseInt(partes[2]));
+			return new Item(nom,rareza,tipo,Integer.parseInt(partes[3]));
 		}
 		
 		else if (tipo.equalsIgnoreCase("Supporter"))

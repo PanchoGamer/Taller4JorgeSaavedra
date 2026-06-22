@@ -1,5 +1,7 @@
 package Dominio;
 
+import Visitor.CartaVisitor;
+
 public class Energy extends Carta {
 	private String element;
 
@@ -13,5 +15,10 @@ public class Energy extends Carta {
 	{
 		return element;
 	}
-	
+
+	@Override
+	public int accept(CartaVisitor visitor) 
+	{
+		return visitor.visitar(this);
+	}
 }

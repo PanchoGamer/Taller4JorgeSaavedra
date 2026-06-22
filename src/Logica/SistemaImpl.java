@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Dominio.*;
+import Visitor.*;
 
 public class SistemaImpl implements Sistema{
 	
@@ -37,6 +38,11 @@ public class SistemaImpl implements Sistema{
 	@Override
 	public int calcularPuntaje(int index)
 	{
+		PuntajeVisitor visitor = new PuntajeVisitor();
+		int total = 0;
 		
+		total += cartas.get(index).accept(visitor);
+		
+		return total;
 	}
 }

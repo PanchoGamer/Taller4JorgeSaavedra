@@ -1,5 +1,7 @@
 package Dominio;
 
+import Visitor.CartaVisitor;
+
 public class Item extends Carta{
 	private int bonificacion;
 
@@ -12,5 +14,11 @@ public class Item extends Carta{
 	public int getBonificacion() 
 	{
 		return bonificacion;
+	}
+
+	@Override
+	public int accept(CartaVisitor visitor) 
+	{
+		return visitor.visitar(this);
 	}
 }

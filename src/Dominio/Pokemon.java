@@ -1,5 +1,7 @@
  package Dominio;
 
+import Visitor.CartaVisitor;
+
 public class Pokemon extends Carta{
 	private int damage;
 	private int cantEnergias;
@@ -19,5 +21,11 @@ public class Pokemon extends Carta{
 	public int getCantEnergias() 
 	{
 		return cantEnergias;
+	}
+	
+	@Override
+	public int accept(CartaVisitor visitor) 
+	{
+		return visitor.visitar(this);
 	}
 }
